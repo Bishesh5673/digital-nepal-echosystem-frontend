@@ -1,5 +1,4 @@
-import { type Citizen } from "@/types/citizen";
-export type {Citizen}
+import type { Citizen } from "@/types/citizen";
 
 export function getWardStats(citizens: Citizen[]) {
   return {

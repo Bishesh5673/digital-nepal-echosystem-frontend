@@ -1,6 +1,17 @@
 'use client';
 import { useWardDashboard } from '@/hooks/useWardDashboard';
 import { WARD_ID } from '@/constants';
+import People from '@mui/icons-material/People';
+import VerifiedUser from '@mui/icons-material/VerifiedUser';
+import SyncProblem from '@mui/icons-material/SyncProblem';
+import CreditCard from '@mui/icons-material/CreditCard';
+
+const ICON_MAP: Record<string, React.ElementType> = {
+  People,
+  VerifiedUser,
+  SyncProblem,
+  CreditCard,
+};
 
 export default function WardDashboardPage() {
   const cards = useWardDashboard(WARD_ID);
@@ -12,7 +23,7 @@ export default function WardDashboardPage() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {cards.map((card, index) => {
-          const Icon = card.icon;
+          const Icon = ICON_MAP[card.icon];
           return (
             <div
               key={index}
@@ -21,7 +32,7 @@ export default function WardDashboardPage() {
               <div className="flex items-center justify-between mb-4">
                 <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center">
                   <div className="text-blue-500">
-                    <Icon />
+                    {Icon && <Icon />}
                   </div>
                 </div>
               </div>

@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import type { Citizen } from '../../lib/utils';
+import type { Citizen } from '@/types/citizen';
 import citizensRaw from '../../data/citizens.json';
 import { WARD_ID } from '@/constants';
 

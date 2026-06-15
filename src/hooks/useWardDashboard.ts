@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import type { Citizen } from "../../lib/utils";
+import type { Citizen } from "@/types/citizen";
 import citizensRaw from "../../data/citizens.json";
 import { getWardStats } from "../../lib/utils";
 
