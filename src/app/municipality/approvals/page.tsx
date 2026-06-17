@@ -172,9 +172,9 @@ export default function MunicipalityApprovalsPage() {
   return (
     <main className="p-6">
       <div>
-        <h1 className="text-2xl font-semibold text-white">Approval Queue</h1>
+        <h1 className="text-2xl font-semibold text-black">Approval Queue</h1>
 
-        <p className="mt-1 text-sm text-white">
+        <p className="mt-1 text-sm text-black">
           Review citizen data edit requests submitted from ward offices.
         </p>
       </div>
