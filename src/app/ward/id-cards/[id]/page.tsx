@@ -97,7 +97,7 @@ export default function IdCardDetailPage() {
           <p className="text-gray-500">Card ID: <span className="font-mono">{card.id}</span></p>
         </div>
         <button
-          onClick={() => router.push('/id-cards')}
+          onClick={() => router.push('/ward/id-cards')}
           className="text-gray-600 hover:text-gray-900 flex items-center gap-2"
         >
           ← Back to List
