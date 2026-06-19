@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import grievancesData from '../../../../data/grievances.json';
 import citizensData from '../../../../data/citizens.json';
+import Link from 'next/link';
 
 interface Grievance {
   id: string;
@@ -165,7 +166,12 @@ export default function GrievancesPage() {
                   </span>
                 </td>
                 <td className="px-6 py-5">
-                  <button className="text-blue-600 hover:underline text-sm font-medium">View</button>
+                  <Link
+                    href={`/ward/grievances/${grievance.id}`}
+                    className="text-blue-600 hover:text-blue-700 hover:underline font-medium text-sm"
+                  >
+                    View Details →
+                  </Link>
                 </td>
               </tr>
             ))}
